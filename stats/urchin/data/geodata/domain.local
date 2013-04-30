@@ -1,0 +1,20 @@
+#
+# This file will be checked for setting local IP -> domain resolution,
+# which can be used to map intranets and any other networks that are
+# not accounted for by Urchin's pre-resolved dns map.  
+#
+# Simply include your custom entries in this file and run the update
+# function in the automation area of the website or the geo-update 
+# utility in the util folder.  Either will check for new geo data
+# downloads first and then import these entries.
+#
+# The format should be one entry per line, starting with the IP
+# address followed by a space or tab and then the domain for that
+# address (spaces not allowed in domain name).  Alternately, you
+# can specify a network range using the notation IP/range where
+# range is 1-32.  Urchin will check for specific IPs first and then
+# look encompassing network ranges.  Example entries:
+#
+# 192.168.10.0/24 my-company
+# 192.168.10.16/28 finance-dept
+# 192.168.10.19 bob-johnson

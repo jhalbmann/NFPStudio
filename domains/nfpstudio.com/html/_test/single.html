@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<meta http-equiv="MSThemeCompatible" content="no" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="ImageToolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+
+<title></title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<style media="screen" type="text/css">
+body{
+background-position:0 68px;
+background-repeat:no-repeat;
+}
+</style>
+</head>
+<body id="look">
+<div id="page">
+
+<div id="header">
+<h1><a href="index.html">New Form Perspective</a></h1>
+
+<div id="nav">
+<ul>
+<li class="current_page_item" style="width:164px;"><a href="lookbook.html">Lookbook</a></li>
+<li style="width:266px;"><a href="#">Shop</a></li>
+<li style="width:72px;"><a href="#">About</a></li>
+<li style="width:72px;"><a href="#">Events</a></li>
+<li style="width:72px;"><a href="#">Contact</a></li>
+<li style="float:right;margin-left:0;width:92px;"><a href="#">Cart</a></li>
+</ul>
+</div>
+</div>
+
+<div id="subnav">
+<ul>
+<li class="current_page_item"><a href="category.html">series 4 : in progress</a></li>
+<li><a href="category.html">series 3 : fw/2010</a></li>
+<li><a href="category.html">series 2 : ss/2010</a></li>
+<li><a href="category.html">series 1 : fw/2009</a></li>
+</ul>
+</div>
+
+<hr />
+
+<div id="content">
+
+<div id="thumb_nav">
+<div id="thumb_links"><a href="#" class="prev">< &nbsp;N11</a> &nbsp; <span class="title">N12 : LIGHTWEIGHT WRAP NECK CARDIGAN</span> &nbsp; <a href="#" class="next">N13 &nbsp;></a></div>
+<div id="thumbs"><div class="thumb"><a href="img/lookbook/s04_01.jpg" title="1"><span class="hover">&nbsp;</span><img src="img/lookbook/s04_thumb_01.jpg" alt="" /></a></div><div class="thumb"><a href="img/lookbook/s04_02.jpg" title="2"><span class="hover">&nbsp;</span><img src="img/lookbook/s04_thumb_02.jpg" alt="" /></a></div><div class="thumb"><a href="img/lookbook/s04_01.jpg" title="3"><span class="hover">&nbsp;</span><img src="img/lookbook/s04_thumb_03.jpg" alt="" /></a></div><div class="thumb"><a href="img/lookbook/s04_02.jpg" title="4"><span class="hover">&nbsp;</span><img src="img/lookbook/s04_thumb_04.jpg" alt="" /></a></div></div>
+<div id="thumb_count"><span>1</span>/4</div>
+</div>
+
+</div>
+
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+$("#thumbs a").first().addClass("current");
+var bgimg = $("#thumbs a").first().attr("href");
+var thumbnum = $("#thumbs a").first().attr("title");
+$("body").css({"background-image": "url(" + bgimg + ")"});
+$("#thumb_count span").replaceWith('<span>' + thumbnum + '</span>');
+});
+
+$("#thumbs a").click(function(){
+$("#thumbs a").removeClass("current");
+$(this).addClass("current");
+var bgimg = $(this).attr("href");
+$("body").css({"background-image": "url(" + bgimg + ")"});
+var thumbnum = $(this).attr("title");
+$("#thumb_count span").replaceWith('<span>' + thumbnum + '</span>');
+return false;
+});
+</script>
+</body>
+</html>

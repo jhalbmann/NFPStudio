@@ -1,0 +1,664 @@
+/*
+Theme Name: New Form Perspective
+Theme URI: http://de-mo.org/
+Description: Custom Theme
+Author: de.MO
+Version: 1.1
+Tags: 
+*/
+
+@import url("css/reset.css");
+@import url("css/fonts.css");
+
+/* GLOBALS */
+body{
+background:url(/wordpress/wp-content/themes/1.1/img/body_bg.jpg) no-repeat;
+color:#666;
+font-family:'Conv_CoSLt___',sans-serif;
+font-size:10px;
+text-transform:uppercase;
+}
+
+input,
+select,
+option,
+pre{
+color:#666;
+font-family:'Conv_CoSLt___',sans-serif;
+font-size:10px;
+text-transform:uppercase;
+}
+
+pre{
+line-height:1.4;
+}
+
+optgroup{
+color:#900;
+font-family:'Conv_CoSLt___',sans-serif;
+font-size:10px;
+font-style:normal;
+font-weight:normal;
+text-transform:uppercase;
+}
+
+a{
+color:#000;
+text-decoration:underline;
+}
+
+a:hover,
+.current-page-item,
+.current-page-item a,
+.current-page-parent a,
+.current-page-ancestor a,
+.current_page_item a,
+.current_page_parent a,
+.current_page_ancestor a{
+color:#900;
+}
+
+hr,.none{
+display:none;
+}
+
+.display_inline{
+display:inline;
+}
+
+.float_left{
+float:left;
+}
+
+.float_right{
+float:right;
+}
+
+strong{
+font-weight:normal;
+}
+
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear{
+clear:both;
+display:block;
+overflow:hidden;
+visibility:hidden;
+width:0;
+height:0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+
+.clear:after{
+clear:both;
+content:' ';
+display:block;
+font-size:0;
+line-height:0;
+visibility:hidden;
+width:0;
+height:0;
+}
+
+.clear{
+display:inline-block;
+}
+
+* html .clear{
+height:1%;
+}
+
+.clear{
+display:block;
+}
+
+#page{
+text-align:left;
+width:1000px;
+}
+
+#header{
+background:#fff;
+display:inline;
+float:left;
+width:100%;
+height:81px;
+}
+
+#header a{
+text-decoration:none;
+}
+
+#header h1{
+font-family:'FFFReactionTrialRegular';
+font-size:10px;
+font-weight:normal;
+margin:20px 20px 30px 20px;
+overflow:hidden;
+height:10px;
+}
+
+#header #close{
+font-size:1px;
+line-height:0;
+position:absolute;
+top:10px;
+right:10px;
+text-indent:-9999px;
+}
+
+#header #nav{
+border-bottom:1px solid #bfbfbf;
+display:inline;
+float:left;
+padding-bottom:10px;
+width:100%;
+}
+
+#header #nav ul{
+display:inline;
+float:left;
+height:10px;
+}
+
+#header #nav li{
+display:inline;
+float:left;
+margin-left:20px;
+}
+
+#header #nav #menu-lookbook-shop li{
+width:164px;
+}
+
+#header #nav #menu-secondary-nav{
+margin-left:102px;
+}
+
+#header #nav #menu-secondary-nav li{
+width:72px;
+}
+
+#header #nav form{
+display:inline;
+float:right;
+padding-right:10px;
+width:auto;
+}
+
+#subnav{
+background:url(/wordpress/wp-content/themes/1.1/img/light_bg.png);
+border-bottom:1px solid #fff;
+clear:both;
+padding:1em 0 0 20px;
+}
+
+#subnav a{
+text-decoration:none;
+}
+
+#subnav li{
+padding-bottom:1em;
+}
+
+#content{
+display:inline;
+float:left;
+padding:10px 0 0 0;
+width:100%;
+}
+
+#content h2{
+color:#000;
+font-weight:normal;
+}
+
+#content strong,
+#content dt{
+color:#900;
+font-weight:normal;
+}
+
+#content .section{
+display:inline;
+float:left;
+margin:0 20px;
+width:960px;
+}
+
+#content .section h2{
+background:#fff;
+line-height:2.75;
+padding:0 5px;
+}
+
+#content .row{
+border-top:2px solid #fff;
+display:inline;
+float:left;
+padding:10px 0;
+width:100%;
+}
+
+#content .row .page{
+display:inline;
+float:left;
+margin-right:5px;
+width:87px;
+}
+
+#content .row .page a{
+display:block;
+line-height:0;
+position:relative;
+text-decoration:none;
+}
+
+#content .row .page a .hover{
+background:url(/wordpress/wp-content/themes/1.1/img/thumb_hover.png);
+display:none;
+position:absolute;
+top:0;
+left:0;
+z-index:1;
+width:87px;
+height:188px;
+}
+
+#content .row .page a:hover .hover{
+display:block;
+}
+
+#content .row .page .title{
+background:url(img/light_bg.png);
+border-bottom:1px solid #fff;
+display:block;
+line-height:1;
+padding:4px 5px 3px 5px;
+}
+
+#content #thumb_nav{
+display:inline;
+float:left;
+margin-left:20px;
+padding-top:6px;
+width:368px;
+}
+
+#content #thumb_links{
+border-bottom:1px solid #bfbfbf;
+display:inline;
+float:left;
+line-height:1.4;
+margin-bottom:10px;
+padding-bottom:10px;
+text-align:center;
+width:363px;
+}
+
+#content #thumb_links a{
+text-decoration:none;
+}
+
+#content #thumb_links .prev a{
+display:inline;
+float:left;
+}
+
+#content #thumb_links .next a{
+display:inline;
+float:right;
+}
+
+#content #thumbs{
+clear:both;
+display:inline;
+float:left;
+margin-bottom:10px;
+text-align:left;
+width:368px;
+}
+
+#content #thumbs .thumb{
+display:inline;
+float:left;
+margin-right:5px;
+}
+
+#content #thumbs a{
+display:block;
+position:relative;
+}
+
+#content #thumbs a .hover{
+background:url(/wordpress/wp-content/themes/1.1/img/thumb_hover.gif);
+display:none;
+position:absolute;
+top:0;
+left:0;
+z-index:1;
+width:87px;
+height:170px;
+}
+
+#content #thumbs .current .hover,
+#content #thumbs a:hover .hover{
+display:block;
+}
+
+#content #details{
+border-top:1px solid #bfbfbf;
+clear:both;
+padding-top:16px;
+width:363px;
+}
+
+#content #thumb_nav h2,
+#content #thumb_nav p{
+line-height:1.4;
+margin-bottom:16px;
+width:363px;
+}
+
+#content #thumb_nav h2{
+border-top:1px solid #bfbfbf;
+clear:both;
+color:#000;
+font-weight:normal;
+padding-top:16px;
+}
+
+#content #thumb_nav h3{
+color:#000;
+display:inline;
+float:left;
+font-weight:normal;
+margin-bottom:16px;
+}
+
+#content #video_link{
+color:#900;
+float:right;
+text-decoration:none;
+}
+
+#content #video_link:hover{
+text-decoration:underline;
+}
+
+#content #img,
+#content #video{
+background:#fff;
+display:inline;
+float:right;
+margin:30px 10px 0 0;
+width:587px;
+}
+
+#content #img .close{
+display:block;
+padding:10px;
+}
+
+#content #video{
+display:none;
+padding:10px 0;
+}
+
+#content #video .close{
+margin:0 10px;
+text-decoration:none;
+}
+
+#content #video iframe{
+margin:10px 10px 0 10px;
+}
+/* end GLOBALS */
+
+/* HOME */
+#home{
+background:url(/wordpress/wp-content/themes/1.1/img/home_bg.jpg) 0 67px repeat-y;
+}
+
+#home #content{
+padding:0;
+}
+/* end HOME */
+
+/* LOOKBOOK */
+#lookbook{
+background:url(/wordpress/wp-content/themes/1.1/img/bg.gif) repeat-y;
+}
+/* end LOOKBOOK */
+
+/* LOOK */
+#look{
+background:url(/wordpress/wp-content/themes/1.1/img/shop_bg.jpg) no-repeat;
+}
+/* end LOOK */
+
+/* SHOP */
+#shop{
+background:url(/wordpress/wp-content/themes/1.1/img/shop_bg.jpg) no-repeat;
+}
+
+#shop #subnav{
+padding-left:204px;
+}
+
+#shop .nav{
+display:inline;
+float:left;
+width:179px;
+}
+
+#show .description{
+display:inline;
+float:left;
+width:741px;
+}
+/* end SHOP */
+
+#shop.page-id-956{
+background:url(/wordpress/wp-content/themes/1.1/img/felt_bg.jpg) no-repeat;
+}
+
+#shop.page-id-958{
+background:url(/wordpress/wp-content/themes/1.1/img/phrame_bg.jpg) no-repeat;
+}
+
+#shop_look{
+background:url(/wordpress/wp-content/themes/1.1/img/shop_bg.jpg) no-repeat;
+}
+
+#shop_look #subnav{
+padding-left:204px;
+}
+
+#shop_look #content #thumb_nav h2{
+border-top:0;
+border-bottom:1px solid #bfbfbf;
+margin-bottom:10px;
+padding-top:0;
+padding-bottom:10px;
+}
+
+#shop_look #content #thumb_nav #description{
+border-top:1px solid #bfbfbf;
+clear:both;
+padding:16px 0;
+width:363px;
+}
+
+#shop_look #content #thumb_nav #description pre{
+clear:both;
+white-space:pre-wrap;
+white-space:-moz-pre-wrap;
+white-space:-o-pre-wrap;
+width:363px;
+}
+
+#shop_look #content #thumb_nav p strong{
+color:#666;
+float:left;
+font-weight:normal;
+margin-right:10px;
+padding-bottom:1em;
+width:60px;
+}
+
+#shop_look #content #thumb_nav form{
+border-top:1px solid #bfbfbf;
+padding-top:16px;
+width:363px;
+}
+
+#shop_look #content #thumb_nav form select{
+display:block;
+margin-bottom:1em;
+width:auto;
+}
+/* end SHOP LOOK */
+
+#sidenav{
+display:inline;
+float:left;
+line-height:1.4;
+margin-left:205px;
+padding-top:16px;
+width:188px;
+}
+
+#sidenav dt{
+color:#666;
+margin-bottom:36px;
+}
+
+#sidenav dd{
+margin-bottom:16px;
+}
+
+#sidenav a{
+color:#666;
+text-decoration:none;
+}
+
+#sidenav a:hover,
+#sidenav .current_page_item a{
+color:#000;
+}
+
+/*
+#about #content .page,
+#events #content .post,
+#press #content .post,
+#contact #content .page{
+display:inline;
+float:left;
+line-height:1.4;
+margin-left:20px;
+padding-top:16px;
+text-transform:none;
+width:440px;
+}
+*/
+
+#content #main{
+display:inline;
+float:left;
+line-height:1.4;
+margin-left:20px;
+padding-top:16px;
+text-transform:none;
+width:440px;
+}
+
+/*
+#press #content .post{
+margin-left:413px;
+}
+*/
+
+#press #content #main{
+margin-left:413px;
+}
+
+#about #content .page p,
+#events #content .post p,
+#press #content .post p{
+margin-bottom:16px;
+}
+
+#press #content .press-thumb{
+line-height:0;
+margin:0 10px 10px 0;
+}
+
+#press #content .press-thumb a{
+display:block;
+overflow:hidden;
+position:relative;
+width:130px;
+height:170px;
+}
+
+#press #content .press-thumb span{
+background-color:rgb(255, 255, 255);
+background-color:rgba(255, 255, 255, 0.9);
+/* For IE 5.5 - 7*/
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff, endColorstr=#99ffffff);
+/* For IE 8*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff, endColorstr=#99ffffff)";
+line-height:1.2;
+position:absolute;
+top:0;
+z-index:1;
+width:130px;
+height:170px;
+}
+
+#press #content .press-thumb span p{
+color:#666;
+padding:0 5px 5px 5px;
+}
+
+#press #content .press-thumb span strong{
+color:#000;
+font-weight:normal;
+display:block;
+padding:5px 5px 0 5px;
+}
+
+.page .item,
+.post .item{
+border-bottom:1px dashed #666;
+margin-bottom:16px;
+}
+
+.page .item object embed{
+margin-bottom:13px;
+}
+
+.post .item a{
+text-decoration:none;
+}
+
+#about #content .close,
+#events #content .close,
+#press #content .close,
+#contact #content .close{
+display:inline;
+float:right;
+padding:16px 20px 0 0;
+}
+
+#contact #content .page dt,
+#contact #content .page dd{
+margin-bottom:16px;
+}
